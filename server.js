@@ -50,8 +50,15 @@ app.get('/about',(req, res) => {
 });
 
 app.get('/bad',(req, res) => {
-  res.send({
+  res.render({
     errorMessage: 'Unable to handle request'
+  });
+});
+
+app.get('/portfolio',(req, res) => {
+  res.render('portfolio.hbs',{
+    pageTitle: 'Portfolio Page',
+    welcomeMessage: 'Welcome to my portfolio page'
   });
 });
 
